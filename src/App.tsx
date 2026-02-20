@@ -2,54 +2,20 @@
 import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties, FormEvent } from "react";
 import { Award, Banknote, CheckCircle2, Clock3, CreditCard, Gift, Mail, Package, Phone, QrCode, ShoppingCart, Star, Truck, User } from "lucide-react";
-import bubbleApple from "./assets/ai-generated/bubble-apple.svg";
-import bubbleBanana from "./assets/ai-generated/bubble-banana.svg";
-import bubbleTomato from "./assets/ai-generated/bubble-tomato.svg";
-import bubbleCarrot from "./assets/ai-generated/bubble-carrot.svg";
-import bubbleBroccoli from "./assets/ai-generated/bubble-broccoli.svg";
-import bubbleOnion from "./assets/ai-generated/bubble-onion.svg";
-import bubbleGrapes from "./assets/ai-generated/bubble-grapes.svg";
-import bubbleOrange from "./assets/ai-generated/bubble-orange.svg";
-import appleImage from "../../src/assets/Apple.jpg";
-import bananaImage from "../../src/assets/Banana.jpg";
-import basmatiRiceImage from "../../src/assets/Basmati Rice.jpg";
-import brownRiceImage from "../../src/assets/Brown Rice.jpg";
-import butterImage from "../../src/assets/Butter.jpg";
-import carrotImage from "../../src/assets/Carrot.jpg";
-import cheeseImage from "../../src/assets/Cheese.jpg";
-import chilliPowderImage from "../../src/assets/Chilli Powder.jpg";
-import coconutOilImage from "../../src/assets/Coconut Oil.jpg";
-import coffeePowderImage from "../../src/assets/Coffe Powder.jpg";
-import curdImage from "../../src/assets/Curd.jpg";
-import fruitJuiceImage from "../../src/assets/Fruit Juice.jpg";
-import gheeImage from "../../src/assets/Ghee.jpg";
-import groundnutOilImage from "../../src/assets/Groundnut Oil.jpg";
-import mangoImage from "../../src/assets/Mango.jpg";
-import milkImage from "../../src/assets/Milk.jpg";
-import moongDalImage from "../../src/assets/Moong Dal.jpg";
-import onionImage from "../../src/assets/Onion.jpg";
-import orangeImage from "../../src/assets/Orange.jpg";
-import paneerImage from "../../src/assets/Paneer.jpg";
-import ponniRiceImage from "../../src/assets/Ponni Rice.jpg";
-import potatoImage from "../../src/assets/Potato.jpg";
-import ragiFlourImage from "../../src/assets/Ragi Flour.jpg";
-import saltImage from "../../src/assets/Salt.jpg";
-import softDrinksImage from "../../src/assets/Soft Drinks.jpg";
-import spinachImage from "../../src/assets/Spinach.jpg";
-import sugarImage from "../../src/assets/Sugar.jpg";
-import sunflowerOilImage from "../../src/assets/Sunflower Oil.jpg";
-import teaPowderImage from "../../src/assets/Tea Powder.jpg";
-import tomatoImage from "../../src/assets/Tomato.jpg";
-import toorDalImage from "../../src/assets/Toor Dal.jpg";
-import turmericPowderImage from "../../src/assets/Turmeric Powder.jpg";
-import wheatFlourImage from "../../src/assets/Wheat Flour.jpg";
-import banner1Image from "../../src/banner/banner1.jpg";
-import banner2Image from "../../src/banner/banner2.jpg";
-import banner3Image from "../../src/banner/banner3.jpg";
-import background1Image from "../../src/background/background1.jpg";
-import background2Image from "../../src/background/background2.jpg";
-import background3Image from "../../src/background/background3.jpg";
 import "./App.css";
+
+const bubbleApple = "/ai-generated/bubble-apple.svg";
+const bubbleBanana = "/ai-generated/bubble-banana.svg";
+const bubbleTomato = "/ai-generated/bubble-tomato.svg";
+const bubbleCarrot = "/ai-generated/bubble-carrot.svg";
+const bubbleBroccoli = "/ai-generated/bubble-broccoli.svg";
+const bubbleOnion = "/ai-generated/bubble-onion.svg";
+const bubbleGrapes = "/ai-generated/bubble-grapes.svg";
+const bubbleOrange = "/ai-generated/bubble-orange.svg";
+const bannerImage = "/banner.jpg";
+const bannerOffersSvg = "/ai-generated/banner-offers.svg";
+const bannerDiscountSvg = "/ai-generated/banner-discount.svg";
+const bannerFreshSvg = "/ai-generated/banner-fresh.svg";
 
 type ProductCategory = "Fruits & Vegetables" | "Rice & Grains" | "Oils & Ghee" | "Dairy Products" | "Grocery & Essentials" | "Beverages";
 
@@ -93,116 +59,24 @@ const baseProductCatalog: BaseProduct[] = [
   { id: 33, name: "Soft Drinks", category: "Beverages", unit: "750 ml", price: 52, sku: "BEV-004", stock: "In Stock" },
 ];
 
-const productPhotoQuery: Record<string, string> = {
-  Apple: "fresh red apple isolated",
-  Banana: "ripe bananas bunch isolated",
-  Orange: "fresh orange fruit isolated",
-  Mango: "ripe mango fruit isolated",
-  Tomato: "fresh tomato isolated",
-  Potato: "fresh potatoes isolated",
-  Onion: "red onion isolated",
-  Carrot: "fresh carrots isolated",
-  Spinach: "spinach leaves isolated",
-  "Basmati Rice": "basmati rice bag product",
-  "Ponni Rice": "rice bag product",
-  "Brown Rice": "brown rice bag product",
-  "Wheat Flour": "wheat flour bag product",
-  "Ragi Flour": "ragi flour bag product",
-  "Sunflower Oil": "sunflower oil bottle product",
-  "Groundnut Oil": "groundnut oil bottle product",
-  "Coconut Oil": "coconut oil bottle product",
-  Ghee: "ghee jar product",
-  Milk: "milk packet bottle product",
-  Butter: "butter pack product",
-  Cheese: "cheese block product",
-  Curd: "curd cup product",
-  Paneer: "paneer cube product",
-  Sugar: "sugar packet product",
-  Salt: "salt packet product",
-  "Turmeric Powder": "turmeric powder packet product",
-  "Chilli Powder": "chilli powder packet product",
-  "Toor Dal": "toor dal packet product",
-  "Moong Dal": "moong dal packet product",
-  Tea: "tea pack product",
-  Coffee: "coffee pack product",
-  "Fruit Juice": "fruit juice bottle product",
-  "Soft Drinks": "soft drink bottle product",
-};
-
-const buildProductImages = (name: string, id: number) => {
-  const localImageByName: Record<string, string> = {
-    Apple: appleImage,
-    Banana: bananaImage,
-    Orange: orangeImage,
-    Mango: mangoImage,
-    Tomato: tomatoImage,
-    Potato: potatoImage,
-    Onion: onionImage,
-    Carrot: carrotImage,
-    Spinach: spinachImage,
-    "Basmati Rice": basmatiRiceImage,
-    "Ponni Rice": ponniRiceImage,
-    "Brown Rice": brownRiceImage,
-    "Wheat Flour": wheatFlourImage,
-    "Ragi Flour": ragiFlourImage,
-    "Sunflower Oil": sunflowerOilImage,
-    "Groundnut Oil": groundnutOilImage,
-    "Coconut Oil": coconutOilImage,
-    Ghee: gheeImage,
-    Milk: milkImage,
-    Butter: butterImage,
-    Cheese: cheeseImage,
-    Curd: curdImage,
-    Paneer: paneerImage,
-    Sugar: sugarImage,
-    Salt: saltImage,
-    "Turmeric Powder": turmericPowderImage,
-    "Chilli Powder": chilliPowderImage,
-    "Toor Dal": toorDalImage,
-    "Moong Dal": moongDalImage,
-    Tea: teaPowderImage,
-    Coffee: coffeePowderImage,
-    "Fruit Juice": fruitJuiceImage,
-    "Soft Drinks": softDrinksImage,
-  };
-
-  const localImage = localImageByName[name];
-  if (localImage) {
-    return [localImage, localImage, localImage];
-  }
-
-  const recordingProductImages: Record<string, string[]> = {
-    Apple: ["/products-recording/rec-apple.png"],
-    Orange: ["/products-recording/rec-orange.png"],
-    Mango: ["/products-recording/rec-mango.png"],
-    Milk: ["/products-recording/rec-dairy-set.png"],
-    Butter: ["/products-recording/rec-dairy-set.png"],
-    Cheese: ["/products-recording/rec-dairy-set.png"],
-    Curd: ["/products-recording/rec-dairy-set.png"],
-    Paneer: ["/products-recording/rec-dairy-set.png"],
-  };
-  const fromRecording = recordingProductImages[name];
-  if (fromRecording) {
-    return [fromRecording[0], fromRecording[0], fromRecording[0]];
-  }
-
-  const query = encodeURIComponent(productPhotoQuery[name] || name);
+const buildProductImages = (name: string) => {
+  const slug = name.toLowerCase().replace(/\s+/g, "-");
   return [
-    `https://source.unsplash.com/1200x900/?${query}&sig=${id}1`,
-    `https://source.unsplash.com/1200x900/?${query},closeup&sig=${id}2`,
-    `https://source.unsplash.com/1200x900/?${query},on-white&sig=${id}3`,
+    `/products-generated/${slug}-1.svg`,
+    `/products-generated/${slug}-2.svg`,
+    `/products-generated/${slug}-3.svg`,
   ];
 };
 
 const productCatalog: Product[] = baseProductCatalog.map((item) => ({
   ...item,
-  images: buildProductImages(item.name, item.id),
+  images: buildProductImages(item.name),
 }));
 const categories = ["All", "Fruits & Vegetables", "Rice & Grains", "Oils & Ghee", "Dairy Products", "Grocery & Essentials", "Beverages"] as const;
 const heroSlides = [
-  { accent: "Offers", title1: "Fresh Quality,", title2: "Every Day", text: "Weekly deal bundles on fresh essentials and groceries.", image: banner1Image, background: background1Image, cta1: "Shop Offers", cta2: "Contact Us" },
-  { accent: "Discount Sale", title1: "Big Discount,", title2: "Smart Shopping", text: "Limited-time savings on rice, oils, groceries, and more.", image: banner2Image, background: background2Image, cta1: "View Discounts", cta2: "Learn More" },
-  { accent: "Fresh Arrivals", title1: "Fresh Arrivals,", title2: "Daily Picks", text: "Newly stocked items delivered quickly with live updates.", image: banner3Image, background: background3Image, cta1: "See New Items", cta2: "Contact Us" },
+  { accent: "Offers", title1: "Fresh Quality,", title2: "Every Day", text: "Weekly deal bundles on fresh essentials and groceries.", image: bannerOffersSvg, background: bannerImage, cta1: "Shop Offers", cta2: "Contact Us" },
+  { accent: "Discount Sale", title1: "Big Discount,", title2: "Smart Shopping", text: "Limited-time savings on rice, oils, groceries, and more.", image: bannerDiscountSvg, background: bannerImage, cta1: "View Discounts", cta2: "Learn More" },
+  { accent: "Fresh Arrivals", title1: "Fresh Arrivals,", title2: "Daily Picks", text: "Newly stocked items delivered quickly with live updates.", image: bannerFreshSvg, background: bannerImage, cta1: "See New Items", cta2: "Contact Us" },
 ];
 const promoOffers = ["Free delivery above Rs. 499", "10% discount for first order", "Buy 1 Get 1 Free on selected items"];
 const aboutHighlights = ["Daily quality checks for all fresh and packed products", "Transparent pricing and weekly value deals", "Fast doorstep delivery with live status updates", "Dedicated support for order and payment assistance", "Carefully curated essentials from trusted brands", "Hygienic storage and handling standards"];
@@ -518,7 +392,7 @@ function About() {
         <div className="info-card about-image-card">
           <h2>Freshness You Can Trust</h2>
           <div className="about-image-wrap">
-            <img src={banner2Image} alt="Freshness You Can Trust" loading="lazy" />
+            <img src={bannerImage} alt="Freshness You Can Trust" loading="lazy" />
             <div className="about-image-overlay">
               <p>Fresh selections, trusted quality, and warm service for every family.</p>
             </div>
