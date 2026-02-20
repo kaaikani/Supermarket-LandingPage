@@ -1,0 +1,91 @@
+﻿{
+  "style_guide": {
+    "visual_style": "ultra realistic, professional e-commerce catalog photography",
+    "lighting": "soft studio key light, subtle rim light, natural contact shadow",
+    "background": "pure white (#FFFFFF) for product images",
+    "quality": "4K, sharp focus, high detail, clean edges",
+    "negative_prompt": "blurry, low-res, watermark, logo, text, label artifacts, extra objects, duplicate objects, cluttered background, noise, overexposed highlights, deformed packaging"
+  },
+  "product_images": [
+    { "file": "apple.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of a fresh red apple, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "banana.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of a ripe yellow banana bunch, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "orange.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of fresh oranges, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "mango.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of ripe mangoes, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "tomato.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of fresh red tomatoes, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "potato.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of clean fresh potatoes, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "onion.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of red onions, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "carrot.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of fresh carrots with trimmed tops, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "spinach.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of fresh spinach leaves bunch, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+
+    { "file": "basmati-rice-bag.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of a premium basmati rice bag package, front-facing, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "ponni-rice-bag.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of a ponni rice bag package, front-facing, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "brown-rice-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of a brown rice package, front-facing, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "wheat-flour-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of wheat flour package, front-facing, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "ragi-flour-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of ragi flour package, front-facing, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+
+    { "file": "sunflower-oil-bottle.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of sunflower cooking oil bottle, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "groundnut-oil-bottle.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of groundnut oil bottle, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "coconut-oil-bottle.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of coconut oil bottle, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "ghee-jar.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of a ghee jar container, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+
+    { "file": "milk-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of milk packet and bottle set, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "butter-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of butter package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "cheese-block-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of cheese block package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "curd-cup.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of curd cup container, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "paneer-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of paneer package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+
+    { "file": "sugar-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of sugar package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "salt-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of iodized salt package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "turmeric-powder-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of turmeric powder packet, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "chilli-powder-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of red chilli powder packet, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "toor-dal-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of toor dal lentils package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "moong-dal-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of moong dal lentils package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+
+    { "file": "tea-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of tea package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "coffee-pack.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of coffee package, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "fruit-juice-bottle.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of fruit juice bottle/carton, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" },
+    { "file": "soft-drink-bottle.png", "size": "2048x2048", "prompt": "Ultra realistic product photo of soft drinks bottle, isolated on pure white background, soft studio lighting, natural soft shadow under object, e-commerce catalog style, 4K" }
+  ],
+  "hero_banner": {
+    "file": "hero-supermarket-16x9.png",
+    "size": "3840x2160",
+    "prompt": "Ultra realistic wide 16:9 hero banner for online supermarket, shopping cart filled with groceries, fresh fruits and vegetables, grocery bags, bright green and orange theme, soft gradient background, modern clean premium promotional layout, leave clear negative space on right side for headline text, high detail, 4K"
+  },
+  "floating_bubbles": [
+    {
+      "file": "bubble-apple.png",
+      "size": "2048x2048",
+      "prompt": "Single circular 3D glass bubble containing fresh red apple, soft glow, smooth shadow, isolated transparent background PNG, clean modern UI decorative element, ultra realistic, high resolution"
+    },
+    {
+      "file": "bubble-tomato.png",
+      "size": "2048x2048",
+      "prompt": "Single circular 3D glass bubble containing fresh tomato, soft glow, smooth shadow, isolated transparent background PNG, clean modern UI decorative element, ultra realistic, high resolution"
+    },
+    {
+      "file": "bubble-rice-bag.png",
+      "size": "2048x2048",
+      "prompt": "Single circular 3D glass bubble containing rice bag product, soft glow, smooth shadow, isolated transparent background PNG, clean modern UI decorative element, ultra realistic, high resolution"
+    },
+    {
+      "file": "bubble-oil-bottle.png",
+      "size": "2048x2048",
+      "prompt": "Single circular 3D glass bubble containing cooking oil bottle, soft glow, smooth shadow, isolated transparent background PNG, clean modern UI decorative element, ultra realistic, high resolution"
+    },
+    {
+      "file": "bubble-vegetables-mix.png",
+      "size": "2048x2048",
+      "prompt": "Single circular 3D glass bubble containing mixed vegetables (carrot, broccoli, onion), soft glow, smooth shadow, isolated transparent background PNG, clean modern UI decorative element, ultra realistic, high resolution"
+    },
+    {
+      "file": "bubble-grapes.png",
+      "size": "2048x2048",
+      "prompt": "Single circular 3D glass bubble containing fresh grapes, soft glow, smooth shadow, isolated transparent background PNG, clean modern UI decorative element, ultra realistic, high resolution"
+    },
+    {
+      "file": "bubble-orange.png",
+      "size": "2048x2048",
+      "prompt": "Single circular 3D glass bubble containing orange fruit, soft glow, smooth shadow, isolated transparent background PNG, clean modern UI decorative element, ultra realistic, high resolution"
+    }
+  ]
+}
